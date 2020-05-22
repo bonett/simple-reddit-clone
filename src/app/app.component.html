@@ -8,11 +8,11 @@
     <label for="link">Link:</label>
     <Input name="link" #newLink>
   </div>
-  <button (click)="_onAddArticle(newTitle, newLink)">
+  <button (click)="addArticle(newTitle, newLink)">
     Submit link
   </button>
 </form>
 
 <div>
-  <app-article *ngFor="let article of articles" [article]="article"></app-article>
+  <app-article *ngFor="let article of sortedArticles()" [article]="article"></app-article>
 </div>
