@@ -1,7 +1,7 @@
 <div>
     <div>
         <div>
-            {{ votes }}
+            {{ article.votes }}
         </div>
         <div>
             Points
@@ -9,18 +9,19 @@
     </div>
 </div>
 <div>
-    <a href="{{ link }}">
-        {{ title }}
+    <a href="{{ article.link }}">
+        {{ article.title }}
     </a>
+    <div>({{ article.domain() }})</div>
     <ul>
         <li>
-            <a (click)="_onVoteUp()">
+            <a (click)="onVoteUp()">
                 <i class="fa fa-arrow-up"></i>
                 upvote
             </a>
         </li>
         <li>
-            <a (click)="_onVoteDown()">
+            <a (click)="onVoteDown()">
                 <i class="fa fa-arrow-down"></i>
                 downvote
             </a>
