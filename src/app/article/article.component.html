@@ -1,0 +1,29 @@
+<div>
+    <div>
+        <div>
+            {{ votes }}
+        </div>
+        <div>
+            Points
+        </div>
+    </div>
+</div>
+<div>
+    <a href="{{ link }}">
+        {{ title }}
+    </a>
+    <ul>
+        <li>
+            <a (click)="_onVoteUp()">
+                <i class="fa fa-arrow-up"></i>
+                upvote
+            </a>
+        </li>
+        <li>
+            <a (click)="_onVoteDown()">
+                <i class="fa fa-arrow-down"></i>
+                downvote
+            </a>
+        </li>
+    </ul>
+</div>
