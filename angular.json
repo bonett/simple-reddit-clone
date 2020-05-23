@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "simple-reddit-app"
+    }
+  },
+  "defaultProject": "simple-reddit-app",
+  "cli": {
+    "analytics": false
+  }
 }
