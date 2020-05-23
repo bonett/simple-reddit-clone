@@ -13,14 +13,14 @@
                     class="article__link">({{ article.domain() }})</a></h3>
         </div>
         <div class="article__votes">
-            <a (click)="onVoteUp()" class="article__button_dark">
+            <button (click)="onVoteUp()" class="article__button_dark">
                 <i class="fa fa-arrow-up"></i>
                 upvote
-            </a>
-            <a (click)="onVoteDown()" class="article__button_dark">
+            </button>
+            <button [disabled]="article.votes === 0" (click)="onVoteDown()" class="article__button_dark">
                 <i class="fa fa-arrow-down"></i>
                 downvote
-            </a>
+            </button>
         </div>
     </div>
 </div>
