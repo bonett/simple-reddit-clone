@@ -1,30 +1,26 @@
-<div>
-    <div>
-        <div>
+<div class="row article">
+    <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 article__counter">
+        <h1 class="article__indicator_dark">
             {{ article.votes }}
-        </div>
-        <div>
+        </h1>
+        <h4 class="article__point_dark">
             Points
-        </div>
+        </h4>
     </div>
-</div>
-<div>
-    <a href="{{ article.link }}">
-        {{ article.title }}
-    </a>
-    <div>({{ article.domain() }})</div>
-    <ul>
-        <li>
-            <a (click)="onVoteUp()">
+    <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9 article__description">
+        <div class="article__title">
+            <h3 class="article__text_dark">{{ article.title }} <a href="{{ article.link }}" target="_blank"
+                    class="article__link">({{ article.domain() }})</a></h3>
+        </div>
+        <div class="article__votes">
+            <a (click)="onVoteUp()" class="article__button_dark">
                 <i class="fa fa-arrow-up"></i>
                 upvote
             </a>
-        </li>
-        <li>
-            <a (click)="onVoteDown()">
+            <a (click)="onVoteDown()" class="article__button_dark">
                 <i class="fa fa-arrow-down"></i>
                 downvote
             </a>
-        </li>
-    </ul>
+        </div>
+    </div>
 </div>

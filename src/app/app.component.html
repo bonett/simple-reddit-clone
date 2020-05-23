@@ -1,18 +1,24 @@
-<form>
-  <h3>Add link</h3>
-  <div>
-    <label for="title">Title:</label>
-    <Input name="title" #newTitle>
-  </div>
-  <div>
-    <label for="link">Link:</label>
-    <Input name="link" #newLink>
-  </div>
-  <button (click)="addArticle(newTitle, newLink)">
-    Submit link
-  </button>
-</form>
+<div class="container">
 
-<div>
-  <app-article *ngFor="let article of sortedArticles()" [article]="article"></app-article>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <form>
+          <h3>Add Link</h3>
+          <div class="form-group">
+            <label for="title">Title:</label>
+            <Input name="title" class="form-control" id="title" placeholder="Enter a title" #newTitle>
+          </div>
+          <div class="form-group">
+            <label for="link">Link:</label>
+            <Input name="link" class="form-control" id="link" placeholder="Enter a link" #newLink>
+          </div>
+          <button type="submit" class="btn btn-primary" (click)="addArticle(newTitle, newLink)">Submit</button>
+        </form>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <app-article *ngFor="let article of sortedArticles()" [article]="article"></app-article>
+      </div>
+    </div>
+  </div>
 </div>
